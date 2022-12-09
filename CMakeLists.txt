@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(mdns_qt)
+project(mdns_qt CXX)
+
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
+
+set(CMAKE_AUTOMOC ON)
 
 set(sources
 	"${CMAKE_CURRENT_SOURCE_DIR}/dnspacket.cpp"
